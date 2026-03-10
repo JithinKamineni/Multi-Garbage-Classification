@@ -1,23 +1,21 @@
 # ♻️ Multi-Garbage Detection and Recycling Recommendation System
 
-An AI-powered waste detection system that identifies multiple types of garbage from an uploaded image and provides intelligent recycling guidance using Retrieval-Augmented Generation (RAG).
+An AI-powered system that detects multiple types of garbage from an image and provides step-wise recycling recommendations using Retrieval-Augmented Generation (RAG).
 
-The system combines **YOLOv8 object detection** with a **knowledge-based retrieval system** and **LLM formatting** to generate practical recycling instructions for detected waste materials.
+This project combines **computer vision**, **information retrieval**, and **LLM-based formatting** to create an intelligent waste management assistant.
+
+The system detects waste items using **YOLOv8**, retrieves recycling knowledge from a **local knowledge base**, and formats the results into clear recycling instructions using an **LLM**.
 
 ---
 
-# 🚀 Project Overview
+# 🚀 Features
 
-Waste management and recycling awareness are major environmental challenges. Manual sorting of waste is inefficient and often leads to improper disposal.
-
-This project proposes an **AI-based solution** that:
-
-• Detects multiple waste objects in an image  
-• Identifies their categories (plastic, paper, glass, etc.)  
-• Retrieves recycling knowledge from a local knowledge base  
-• Generates step-by-step recycling instructions  
-
-The system is deployed as an interactive **web application using Streamlit**.
+• Detect multiple waste objects in a single image  
+• Identify waste categories with confidence scores  
+• Display bounding boxes around detected objects  
+• Retrieve recycling knowledge using RAG  
+• Generate step-wise recycling instructions  
+• Interactive web interface using Streamlit  
 
 ---
 
@@ -27,11 +25,195 @@ The system is deployed as an interactive **web application using Streamlit**.
 |--------|--------|
 | Object Detection | YOLOv8 (Ultralytics) |
 | Retrieval System | FAISS |
-| Knowledge Embeddings | Sentence Transformers |
+| Text Embeddings | Sentence Transformers |
 | LLM Formatting | Gemini API |
 | Web Interface | Streamlit |
 | Programming Language | Python |
 
 ---
 
-# 🗂 Project Architecture
+# 🗑 Waste Categories Detected
+
+The model detects the following waste categories:
+
+• Paper  
+• Plastic  
+• Glass  
+• Metal  
+• Cardboard  
+• Biodegradable  
+
+Multiple objects can be detected within the same image.
+
+---
+
+# 🏗 System Architecture
+
+Image Upload
+↓
+YOLOv8 Object Detection
+↓
+Detected Waste Classes
+↓
+RAG Retrieval (knowledge_base)
+↓
+LLM Formatting (Gemini API)
+↓
+Recycling Recommendations
+
+---
+
+# ⚙️ Installation Guide
+
+## 1️⃣ Clone the Repository
+
+
+git clone https://github.com/YOUR_USERNAME/Multi-Garbage-Classification.git
+
+cd Multi-Garbage-Classification
+
+
+---
+
+## 2️⃣ Install Dependencies
+
+
+pip install -r requirements.txt
+
+
+---
+
+# 🔑 Setting Up the API Key
+
+This project requires a **Gemini API key** to format the recycling recommendations.
+
+## Step 1 — Generate an API Key
+
+Go to:
+
+
+https://aistudio.google.com/app/apikey
+
+
+Create a new Gemini API key.
+
+---
+
+## Step 2 — Create a `.env` File
+
+Inside the project folder, create a file named:
+
+
+.env
+
+
+Add your API key to the file like this:
+
+
+GEMINI_API_KEY=your_api_key_here
+
+
+Example:
+
+
+GEMINI_API_KEY=AIzaSyXXXXXXXXXXXXXXX
+
+
+⚠️ Important:
+
+• Do **not upload `.env` to GitHub**  
+• `.env` should remain only on your local machine  
+• The repository already includes `.gitignore` to prevent this file from being pushed  
+
+---
+
+# ▶️ Running the Application
+
+Start the Streamlit app with:
+
+
+streamlit run app.py
+
+
+The application will start in your browser at:
+---
+
+# ⚙️ Installation Guide
+
+## 1️⃣ Clone the Repository
+
+
+git clone https://github.com/YOUR_USERNAME/Multi-Garbage-Classification.git
+
+cd Multi-Garbage-Classification
+
+
+---
+
+## 2️⃣ Install Dependencies
+
+
+pip install -r requirements.txt
+
+
+---
+
+# 🔑 Setting Up the API Key
+
+This project requires a **Gemini API key** to format the recycling recommendations.
+
+## Step 1 — Generate an API Key
+
+Go to:
+
+
+https://aistudio.google.com/app/apikey
+
+
+Create a new Gemini API key.
+
+---
+
+## Step 2 — Create a `.env` File
+
+Inside the project folder, create a file named:
+
+
+.env
+
+
+Add your API key to the file like this:
+
+
+GEMINI_API_KEY=your_api_key_here
+
+
+Example:
+
+
+GEMINI_API_KEY=AIzaSyXXXXXXXXXXXXXXX
+
+
+⚠️ Important:
+
+• Do **not upload `.env` to GitHub**  
+• `.env` should remain only on your local machine  
+• The repository already includes `.gitignore` to prevent this file from being pushed  
+
+---
+
+# ▶️ Running the Application
+
+Start the Streamlit app with:
+
+
+streamlit run app.py
+
+
+The application will start in your browser at:
+
+
+
+
+
+
