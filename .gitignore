@@ -1,5 +1,5 @@
-.env 
-__pycache__/ 
-*.pyc 
-OUTPUTS/
+.env
 uploads/
+OUTPUTS/
+__pycache__/
+*.pyc
