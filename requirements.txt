@@ -1,5 +1,5 @@
-ultralytics
 streamlit
+ultralytics
 pillow
 faiss-cpu
 sentence-transformers
