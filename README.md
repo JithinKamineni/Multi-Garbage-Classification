@@ -211,7 +211,18 @@ streamlit run app.py
 
 
 The application will start in your browser at:
+http://localhost:8501
 
+
+---
+
+# 🌐 Web Application Usage
+
+1. Upload an image containing waste items  
+2. The YOLOv8 model detects garbage objects  
+3. Detected classes and bounding boxes are displayed  
+4. The system retrieves recycling knowledge  
+5. Step-wise recycling instructions are generated  
 
 
 
